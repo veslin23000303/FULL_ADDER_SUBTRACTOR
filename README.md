@@ -48,7 +48,7 @@ Write the detailed procedure here
 */
 
 FULL_ADDER:
-'''
+***
 module full_adder(a,b,cin,sum,carry);
 input a,b,cin;
 output sum,carry;
@@ -62,9 +62,9 @@ and(w4,cin,a);
 
 or(carry,w2,w3,w4);
 endmodule
-'''
+***
 FULL_SUBRACTOR:
-'''
+***
 module full_subtracter(a,b,Bin,BO,DIFF);
 input a,b,Bin;
 output BO,DIFF;
@@ -72,7 +72,7 @@ assign DIFF = a ^ b ^ Bin;
   assign BO = (a & b) | ((a ^ b) & Bin);
 endmodule
 
-'''
+***
 DEVELOPED BY:VESLIN ANISH
 REGISTER NO:212223240175
 
@@ -92,6 +92,7 @@ FULL_ADDER:
 
 
 FULL_SUBTRACTOR:
+
 ![WhatsApp Image 2024-04-03 at 08 01 11_945997d7](https://github.com/veslin23000303/FULL_ADDER_SUBTRACTOR/assets/151148539/88b9a2eb-6db1-4c25-b24d-7c98323bbd41)
 
 
