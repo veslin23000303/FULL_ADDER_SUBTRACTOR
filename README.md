@@ -47,9 +47,53 @@ Write the detailed procedure here
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 
+FULL_ADDER:
+'''
+module full_adder(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+wire w1,w2,w3,w4;       
+xor(w1,a,b);
+xor(sum,w1,cin);        
+
+and(w2,a,b);
+and(w3,b,cin);
+and(w4,cin,a);
+
+or(carry,w2,w3,w4);
+endmodule
+'''
+FULL_SUBRACTOR:
+'''
+module full_subtracter(a,b,Bin,BO,DIFF);
+input a,b,Bin;
+output BO,DIFF;
+assign DIFF = a ^ b ^ Bin;
+  assign BO = (a & b) | ((a ^ b) & Bin);
+endmodule
+
+'''
+DEVELOPED BY:VESLIN ANISH
+REGISTER NO:212223240175
+
 **RTL Schematic**
+FULL_ADDER:
+![WhatsApp Image 2024-04-03 at 08 00 14_e86ce16e](https://github.com/veslin23000303/FULL_ADDER_SUBTRACTOR/assets/151148539/ebadfbf8-c469-4197-8bf3-a0492548419e)
+
+FULL_SUBTRACTOR:
+![WhatsApp Image 2024-04-03 at 08 00 41_9ac13625](https://github.com/veslin23000303/FULL_ADDER_SUBTRACTOR/assets/151148539/30b8c910-7fa2-46ac-bd1e-1d5e40e5f3d4)
+
+
+
 
 **Output Timing Waveform**
+FULL_ADDER:
+![WhatsApp Image 2024-04-03 at 08 00 55_2a02cb4b](https://github.com/veslin23000303/FULL_ADDER_SUBTRACTOR/assets/151148539/acbe3cd0-7a92-4e1b-8fa8-57e6294a5ff0)
+
+
+FULL_SUBTRACTOR:
+![WhatsApp Image 2024-04-03 at 08 01 11_945997d7](https://github.com/veslin23000303/FULL_ADDER_SUBTRACTOR/assets/151148539/88b9a2eb-6db1-4c25-b24d-7c98323bbd41)
+
 
 **Result:**
 
